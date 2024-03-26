@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Book = ({ book }) => {
   const { bookName, image, rating, tags , author, category, bookId  } = book;
   return (
-    <Link to={`/job/${bookId}`} className="card w-96 hover:scale-105 bg-base-100 shadow-xl cursor-pointer hover:border border-gray-400">
-      <figure className="px-10 pt-10">
+    <Link to={`/job/${bookId}`} className="card hover:scale-105 bg-base-100 shadow-xl cursor-pointer hover:border border-gray-400 mx-5 lg:mx-0">
+      <figure className="pt-10">
         <img
           src={image}
           alt="book"
-          className="rounded-xl w-[300px] h-[250px]"
+          className="rounded-xl w-[350px] h-[250px]"
         />
       </figure>
       <div className="card-body">

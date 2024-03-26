@@ -3,18 +3,32 @@ import ReadList from "./ReadList";
 import Wishlist from "./Wishlist";
 import { useEffect, useState } from "react";
 import { getStored } from "../Utils/localStorage";
+import { getStoredWish } from "../Utils/localStorage2";
 
 const ListedBooks = () => {
     const books = useLoaderData() ;
-    const [reads, setReads] = useState()
+    const [reads, setReads] = useState() ;
+
+   
     useEffect(()=> {
         const stroedBooks = getStored() ;
         if(books.length) {
             const readBooks = books.filter(book => stroedBooks.includes(book.bookId)) ;
-            console.log(books, readBooks);
             setReads(readBooks) ;
         }
-    },[books])
+    },[books]) 
+
+    const [wishBook, setWishBook] = useState() ;
+
+    useEffect(()=> {
+        const stroedWishBooks = getStoredWish() ;
+        if(books.length){
+            const wishBooks = books.filter(book => stroedWishBooks.includes(book.bookId)) ;
+            setWishBook(wishBooks);
+        }
+    }, [books])
+
+
   return (
     <section className="container mx-auto">
         <div className="bg-[#1313130D] rounded-2xl">
@@ -47,7 +61,7 @@ const ListedBooks = () => {
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
-         <Wishlist reads={reads}></Wishlist>
+         <Wishlist wishBook={wishBook}></Wishlist>
         </div>
       </div>
     </section>

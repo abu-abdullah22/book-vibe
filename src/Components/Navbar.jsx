@@ -28,7 +28,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn bg-[#23BE0A] text-white font-semibold mr-2">sign in</a>
+    <a className="btn bg-[#59C6D2] text-white font-semibold">sign up</a>
   </div>
 </div>
     );

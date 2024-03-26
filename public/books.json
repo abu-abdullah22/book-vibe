@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/qBNjGqn/9780857304568.jpg",
+      "review": "The Great Gatsby, a classic American novel, transports readers to the roaring twenties, a time of lavish parties and excess. Through the eyes of narrator Nick Carraway, we enter the world of Jay Gatsby, a mysterious millionaire with a hidden past and an undying love for Daisy Buchanan. Fitzgerald's prose is elegant and haunting, capturing the glamour and disillusionment of the Jazz Age. Themes of wealth, love, and the American Dream resonate powerfully, making this novel a timeless masterpiece.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classics", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/99KNS13/To-Kill-a-Mockingbird-first-edition-cover.jpg",
+      "review": "Harper Lee's To Kill a Mockingbird is a poignant exploration of racial injustice and moral growth in the Deep South. Set during the 1930s, the novel follows Scout Finch, a young girl navigating the complexities of her small town. When her father, Atticus Finch, defends a black man accused of raping a white woman, Scout learns about prejudice, empathy, and the importance of standing up for what's right. Lee's evocative storytelling and memorable characters make this a must-read for all ages.",
+      "totalPages": 324,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Classics", "Social Justice", "Coming-of-age"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/8D99Dyz/1984-by-George-Orwell.jpg",
+      "review": "George Orwell's 1984 is a chilling dystopian novel that remains relevant in today's world. Set in a totalitarian society where individuality is suppressed and surveillance is omnipresent, the story follows Winston Smith, a disillusioned bureaucrat who rebels against the oppressive regime. Through Winston's journey, Orwell explores themes of censorship, propaganda, and the power of language. 1984 serves as a stark warning about the dangers of authoritarianism and the erosion of personal freedoms.",
+      "totalPages": 328,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political", "Classic"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/yhJCQyk/Pride-Prejudice.jpg",
+      "review": "Jane Austen's Pride and Prejudice is a timeless romantic comedy that continues to enchant readers worldwide. Set in early 19th-century England, the novel follows the spirited Elizabeth Bennet as she navigates the social intricacies of her society. When she meets the aloof Mr. Darcy, sparks fly, but misunderstandings and prejudices threaten to keep them apart. Austen's wit and keen observation of human nature shine through in this tale of love, pride, and the power of second chances.",
+      "totalPages": 432,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Romance", "Classic", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/SPkV4gX/im-173743.jpg",
+      "review": "J.D. Salinger's The Catcher in the Rye is a provocative coming-of-age novel that has captivated readers for generations. Narrated by the rebellious Holden Caulfield, the story follows his escapades and encounters in New York City after being expelled from prep school. Through Holden's cynical yet vulnerable voice, Salinger explores themes of alienation, identity, and the loss of innocence. The novel's raw honesty and relatable protagonist continue to resonate with readers of all ages.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Classic", "Rebellion"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/yf7Wz1W/712c-DO7d73-L-AC-UF1000-1000-QL80.jpg",
+      "review": "J.R.R. Tolkien's The Hobbit is a captivating adventure set in the fantastical world of Middle-earth. The story follows Bilbo Baggins, a hobbit who embarks on a journey to reclaim the Lonely Mountain and its treasure from the fearsome dragon Smaug. Along the way, Bilbo encounters trolls, elves, and a mysterious creature named Gollum, testing his courage and resourcefulness. Tolkien's richly imagined world, filled with memorable characters and epic quests, makes The Hobbit a timeless classic for readers of all ages.",
+      "totalPages": 310,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Middle-earth", "Quest"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]
+  

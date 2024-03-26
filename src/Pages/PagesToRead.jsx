@@ -46,7 +46,7 @@ const PagesToRead = () => {
   
 
   return (
-    <div>
+    <div className="flex justify-center mt-8 bg-[#13131308] container mx-auto lg:h-[550px] rounded-lg items-center">
        <BarChart
       width={1000}
       height={300}

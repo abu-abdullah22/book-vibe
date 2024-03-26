@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveRead } from "../Utils/localStorage";
+import { getStored, saveRead } from "../Utils/localStorage";
 import { saveReadWish } from "../Utils/localStorage2";
 
 const BookDetails = () => {
@@ -16,8 +16,14 @@ const BookDetails = () => {
   } ;
 
   const handleWish = () => {
-    saveReadWish(idInt) ;
-    toast('Added to wishlist successfully') ;
+    const readData = getStored() ;
+    if(!readData.includes(idInt)){
+        saveReadWish(idInt) ;
+        toast('Added to wishlist successfully') ;
+    } else{
+        toast('Already read!')
+    }
+   
   }
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800 container">

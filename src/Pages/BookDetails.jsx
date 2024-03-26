@@ -21,7 +21,7 @@ const BookDetails = () => {
         saveReadWish(idInt) ;
         toast('Added to wishlist successfully') ;
     } else{
-        toast('Already read!')
+        toast.error('Already read!')
     }
    
   }

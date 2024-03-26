@@ -1,11 +1,22 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveRead } from "../Utils/localStorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
   const idInt = parseInt(bookId);
   const book = books?.find((book) => book?.bookId === idInt);
-  console.log(books);
+  
+  const handleRead = () => {
+    saveRead(idInt)
+    toast('Added to the readlist successfully!') ;
+  } ;
+
+  const handleWish = () => {
+    toast('Added to wishlist successfully') ;
+  }
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800 container">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-around">
@@ -13,7 +24,7 @@ const BookDetails = () => {
           <img
             src={book.image}
             alt="book"
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+            className="object-contain rounded-lg h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
           />
         </div>
         <div className="flex flex-col rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
@@ -44,14 +55,14 @@ const BookDetails = () => {
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
             <a
               rel="noopener noreferrer"
-              href="#"
+              href="#" onClick={handleRead}
               className="px-8 py-2 text-lg font-semibold rounded-[8px] dark:bg-violet-600 dark:text-gray-50 border-2 border-[#1313134D] btn "
             >
             Read
             </a>
             <a
               rel="noopener noreferrer"
-              href="#"
+              href="#" onClick={handleWish}
               className="px-8 py-2 btn text-lg font-semibold bg-[#50B1C9] rounded-[8px] dark:border-gray-800"
             >
               Wishlist
@@ -59,6 +70,7 @@ const BookDetails = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

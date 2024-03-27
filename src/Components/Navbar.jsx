@@ -35,7 +35,7 @@ const Navbar = () => {
               <NavLink to="/pages-to-read">Pages To Read </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About BooK Vibe</NavLink>
+              <NavLink to="/about">About Book Vibe</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact Us</NavLink>
@@ -61,7 +61,7 @@ const Navbar = () => {
             <NavLink to="/pages-to-read">Pages To Read</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About BooK Vibe</NavLink>
+            <NavLink to="/about">About Book Vibe</NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact Us</NavLink>

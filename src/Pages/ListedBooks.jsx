@@ -9,6 +9,8 @@ const ListedBooks = () => {
   const books = useLoaderData();
   const [reads, setReads] = useState([]);
 
+ 
+
   useEffect(() => {
     const stroedBooks = getStored();
     if (books.length) {
@@ -16,6 +18,7 @@ const ListedBooks = () => {
         stroedBooks.includes(book.bookId)
       );
       setReads(readBooks);
+   
     }
   }, [books]);
 

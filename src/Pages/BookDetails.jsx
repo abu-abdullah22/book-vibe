@@ -2,7 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getStored, saveRead } from "../Utils/localStorage";
-import { saveReadWish } from "../Utils/localStorage2";
+import { getStoredWish, saveReadWish } from "../Utils/localStorage2";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -11,16 +11,25 @@ const BookDetails = () => {
   const book = books?.find((book) => book?.bookId === idInt);
   
   const handleRead = () => {
-    saveRead(idInt)
-    toast('Added to the readlist successfully!') ;
+    const readData = getStored() ;
+    if(!readData.includes(idInt)){
+      saveRead(idInt)
+      toast('Added to the readlist successfully!') ;
+    } else{
+      toast.error('Already added to readlist')
+    }
   } ;
 
   const handleWish = () => {
     const readData = getStored() ;
-    if(!readData.includes(idInt)){
+    const wishtData = getStoredWish() ;
+    if(!readData.includes(idInt) && !wishtData.includes(idInt)){
         saveReadWish(idInt) ;
         toast('Added to wishlist successfully') ;
-    } else{
+    } else if(wishtData.includes(idInt)){
+      toast.error('Already added to wishlist')
+    } 
+    else{
         toast.error('Already read!')
     }
    
@@ -28,7 +37,7 @@ const BookDetails = () => {
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800 container">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-around">
-        <div className="flex items-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <div className="flex items-center mt-8 lg:mt-0 mb-4 lg:mb-0  lg:h-[500px] p-[70px] rounded-lg xl:h-112 2xl:h-128 bg-[#1313130D]">
           <img
             src={book.image}
             alt="book"

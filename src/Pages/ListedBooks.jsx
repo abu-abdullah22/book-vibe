@@ -8,6 +8,8 @@ import { getStoredWish } from "../Utils/localStorage2";
 const ListedBooks = () => {
   const books = useLoaderData();
   const [reads, setReads] = useState([]);
+  const [displayReads, setDisplayReads] = useState([]) ;
+
 
  
 
@@ -34,6 +36,16 @@ const ListedBooks = () => {
     }
   }, [books]);
 
+
+  // const handleDisplay = filter => {
+  //   if(filter === 'year') {
+  //     const sortedByYear = reads.sort((a,b) => b.yearOfPublishing - a.yearOfPublishing) ;
+  //     setDisplayReads(sortedByYear) ;
+  //   }
+  // }
+
+
+
   return (
     <section className="container mx-auto">
       <div className="bg-[#1313130D] rounded-2xl">
@@ -47,7 +59,7 @@ const ListedBooks = () => {
               <a>Year</a>
             </li>
             <li>
-              <a>Category</a>
+              <a>Pages</a>
             </li>
           </ul>
         </details>

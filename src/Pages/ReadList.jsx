@@ -13,7 +13,7 @@ const ReadList = ({ sortReads}) => {
             <figure>
               <img
                 src={read.image}
-                alt="Movie" className="h-[230px] lg:w-[230px] object-contain rounded-3xl lg:mx-0"
+                alt="Movie" className="h-[230px] lg:w-[230px] object-contain rounded-3xl lg:mx-0 mx-5"
               />
             </figure>
             <div className="card-body">

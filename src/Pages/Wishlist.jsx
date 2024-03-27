@@ -3,10 +3,10 @@ import { MdLocationOn } from "react-icons/md";
 import { MdSupervisorAccount } from "react-icons/md";
 import { PiBookBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
-const Wishlist = ({wishBook}) => {
+const Wishlist = ({sortWishBook}) => {
     return (
         <div className="grid gap-2">
-      {wishBook?.map((read) => (
+      {sortWishBook?.map((read) => (
         <section key={read.bookId}>
           <div className="lg:card lg:card-side bg-base-100 shadow-xl">
             <figure>
@@ -35,7 +35,7 @@ const Wishlist = ({wishBook}) => {
 
               <div className="card-actions w-1/3">
                <p className="text-[#328EFF] bg-[#328EFF26] rounded-3xl p-1 text-center">Category : {read.category}</p>
-               <p className="text-[#FFAC33] bg-[#FFAC3326] rounded-3xl p-1 text-center">Rating : {read.category}</p>
+               <p className="text-[#FFAC33] bg-[#FFAC3326] rounded-3xl p-1 text-center">Rating : {read.rating}</p>
                <Link to={`/book/${read.bookId}`} className="bg-[#23BE0A] text-white rounded-3xl py-1 px-3 text-center"> View Details</Link>
               </div>
             </div>
@@ -47,7 +47,7 @@ const Wishlist = ({wishBook}) => {
 };
 
 Wishlist.propTypes = {
-    wishBook : propTypes.object 
+    sortWishBook : propTypes.object 
 }
 
 export default Wishlist;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useLoaderData } from "react-router-dom";
 import { getStored } from "../Utils/localStorage";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';

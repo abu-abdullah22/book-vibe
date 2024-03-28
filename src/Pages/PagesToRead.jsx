@@ -41,10 +41,6 @@ const PagesToRead = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
       };
 
-  
-      
-    
-  
 
   return (
     <div className="flex justify-center mt-8 bg-[#13131308] container mx-auto lg:h-[550px] rounded-lg items-center">
